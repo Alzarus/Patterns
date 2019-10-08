@@ -1,4 +1,4 @@
-package receiver;
+package command.receiver;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

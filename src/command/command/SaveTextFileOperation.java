@@ -1,6 +1,6 @@
-package command;
+package command.command;
 
-import receiver.TextFile;
+import command.receiver.TextFile;
 
 /*
  * To change this license header, choose License Headers in Project Properties.

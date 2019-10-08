@@ -3,12 +3,12 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package client;
+package command.client;
 
-import command.OpenTextFileOperation;
-import command.SaveTextFileOperation;
-import invoker.TextFileOperationExecutor;
-import receiver.TextFile;
+import command.command.OpenTextFileOperation;
+import command.command.SaveTextFileOperation;
+import command.invoker.TextFileOperationExecutor;
+import command.receiver.TextFile;
 
 /**
  *
@@ -21,5 +21,5 @@ public class Client {
         textFileOperationExecutor.executeOperation(new OpenTextFileOperation(new TextFile("file1.txt")));
         textFileOperationExecutor.executeOperation(new SaveTextFileOperation(new TextFile("file2.txt")));
     }
-        
+
 }
