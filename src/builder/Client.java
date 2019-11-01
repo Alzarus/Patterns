@@ -13,15 +13,19 @@ import java.util.Random;
  * @author alzarus
  */
 public class Client {
-    public static void main(String[] args){
-        byte[] array = new byte[7]; //name length
-        new Random().nextBytes(array);
-        
+
+    public static void main(String[] args) {
+
         Supervisor supervisor = new Supervisor();
-        for(int i = 0; i < 10; i++){
-            supervisor.addEmployee(new Pawn(new String(array, Charset.forName("UTF-8"))));
+        for (int i = 0; i < 10; i++) {
+            RandomString session = new RandomString();
+            
+            byte[] array = new byte[7]; //name length
+            new Random().nextBytes(array);
+//            supervisor.addEmployee(new Pawn(new String(array, Charset.forName("UTF-8"))));
+            supervisor.addEmployee(new Pawn(session.nextString()));
         }
-        
+
         String result = supervisor.makeProject();
         System.out.println("The result of project was: " + result);
     }

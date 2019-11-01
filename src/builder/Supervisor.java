@@ -13,17 +13,17 @@ import java.util.List;
  * @author alzarus
  */
 public class Supervisor {
-    private List<Pawn> employees;
+    private List<Builder> employees;
     
     public Supervisor(){
-        this.employees = new ArrayList<Pawn>();
+        this.employees = new ArrayList<Builder>();
     }
     
-    public void addEmployee(Pawn employee){
+    public void addEmployee(Builder employee){
         this.employees.add(employee);
     }
 
-    public List<Pawn> getEmployees() {
+    public List<Builder> getEmployees() {
         return employees;
     }
     
@@ -31,7 +31,7 @@ public class Supervisor {
         if(this.employees == null){
             return "No employees with the supervisor. He cannot do anything alone.";
         } else {
-            for(Pawn p : this.getEmployees()){
+            for(Builder p : this.getEmployees()){
                 p.work();
             }
             return "All the employees had worked.";
